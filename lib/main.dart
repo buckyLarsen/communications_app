@@ -1,3 +1,4 @@
+import 'package:communication_assistance_app/basic_needs_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,7 +50,10 @@ class ButtonGrid extends StatelessWidget {
       children: <Widget>[
         ElevatedButton(
           onPressed: () {
-            // Action for Basic Needs button
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BasicNeedsPage()),
+            );
           },
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.all(16.0),
