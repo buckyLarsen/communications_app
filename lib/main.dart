@@ -1,161 +1,33 @@
-import 'package:communication_assistance_app/basic_needs_page.dart';
+// main.dart
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
+import 'basic_needs_screen.dart';
+import 'emotions_screen.dart';
+import 'food_screen.dart';
+import 'activities_screen.dart';
+import 'locations_screen.dart';
+import 'time_routines_screen.dart';
+import 'add_Item_Screen.dart';
+import 'configure_Data_Screen.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MyApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Welcome',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          centerTitle: true,
-          leading: IconButton(
-            onPressed: () {
-              //action for the settings button
-            },
-            icon: Icon(Icons.settings),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                //action for the home button
-              },
-              icon: Icon(Icons.home),
-            ),
-          ],
-        ),
-        body: ButtonGrid(),
-      ),
-    );
-  }
-}
-
-class ButtonGrid extends StatelessWidget {
-  const ButtonGrid({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 4,
-      padding: EdgeInsets.all(16.0),
-      children: <Widget>[
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => BasicNeedsPage()),
-            );
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Basic Needs'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Emotions button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Emotions'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Activities button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Activities'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Social interactions button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Social interactions'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Objects and Descriptors button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Objects and Descriptors'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Locations button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Locations'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Time and Routines button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Time and Routines'),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            // Action for Requests and Preferences button
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(16.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.black, width: 1.0),
-            ),
-          ),
-          child: const Text('Requests and Preferences'),
-        ),
-      ],
-    );
-  }
-}
+      title: 'Navigation Example',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/basic_needs': (context) => const BasicNeedsScreen(),
+        '/emotions': (context) => const EmotionsScreen(),
+       '/food': (context) => const FoodScreen(),
+        '/activities': (context) => const ActivitiesScreen(),
+        '/locations': (context) => const LocationsScreen(),
+        '/time_routines': (context) => const TimeRoutinesScreen(),
+        '/add_item': (context) => const AddItemScreen(),
+        '/configure' : (context) => const ConfigureDataScreen(),
+      },
