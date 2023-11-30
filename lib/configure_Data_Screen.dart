@@ -1,3 +1,5 @@
+// configure_Data_Screen.dart
+
 import 'package:flutter/material.dart';
 
 class ConfigureDataScreen extends StatelessWidget {
@@ -18,6 +20,11 @@ class ConfigureDataScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(40, 40),
                 backgroundColor: Colors.transparent,
+                padding: EdgeInsets.all(16.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  side: BorderSide(color: Colors.black, width: 1.0),
+                ),
               ),
               child: Column(
                 children: [
@@ -45,6 +52,11 @@ class ConfigureDataScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(40, 40),
                 backgroundColor: Colors.transparent,
+                padding: EdgeInsets.all(16.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  side: BorderSide(color: Colors.black, width: 1.0),
+                ),
               ),
               child: Column(
                 children: [
