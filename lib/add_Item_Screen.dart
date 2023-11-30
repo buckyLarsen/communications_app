@@ -1,3 +1,5 @@
+// add_Item_Screen.dart
+
 import 'package:flutter/material.dart';
 
 class AddItemScreen extends StatelessWidget {
@@ -6,7 +8,7 @@ class AddItemScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Configure')),
+      appBar: AppBar(title: const Text('Add Item')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,6 +20,11 @@ class AddItemScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(40, 40),
                 backgroundColor: Colors.transparent,
+                padding: EdgeInsets.all(16.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  side: BorderSide(color: Colors.black, width: 1.0),
+                ),
               ),
               child: Column(
                 children: [
@@ -45,6 +52,11 @@ class AddItemScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(40, 40),
                 backgroundColor: Colors.transparent,
+                padding: EdgeInsets.all(16.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  side: BorderSide(color: Colors.black, width: 1.0),
+                ),
               ),
               child: Column(
                 children: [
