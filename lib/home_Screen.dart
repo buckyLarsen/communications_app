@@ -17,9 +17,9 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Expanded(child: buildButton(context, '/add_item', Icons.add, 'Add Item', iconSize: 40.0)),
-                  const SizedBox(width: 20),
                   Expanded(child: buildButton(context, '/configure', Icons.settings, 'Configure', iconSize: 40.0)),
+                  const SizedBox(width: 20),
+                   Expanded(child: buildButton(context, '/objects', Icons.category, 'Objects', iconSize: 40.0)),
                   const SizedBox(width: 20),
                   Expanded(child: buildButton(context, '/food', Icons.restaurant, 'Food', iconSize: 40.0)),
                   const SizedBox(width: 20),
@@ -88,4 +88,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
